@@ -1,0 +1,38 @@
+.statistics{
+    display: inline-block;
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+}
+
+.title {
+    display: inline-block;
+    padding: 40px 0;
+
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.list {
+    display: flex;
+    width: 100%;
+}
+
+.item {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    width: 80px;
+}
+
+.label{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.percentage{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
