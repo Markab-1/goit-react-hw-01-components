@@ -1,22 +1,26 @@
+import PropTypes from 'prop-types';
 import s from './FriendsList.module.css'
 
 const FriendsListItem = ({ avatar, name, isOnline }) => {
+  let bcgColor = "";
+  bcgColor = isOnline ? "green" : "red" ;
   return (
-    <li className={s.item}>
-      {isOnline ?
-        <span
-          className={s.status}
-          style={{backgroundColor: "green" }}></span> :
-        <span
-          className={s.status}
-          style={{backgroundColor: "red" }}></span>}     
+    <div className={s.itemThumb}>
+      <span className={s.status}
+        style={{ backgroundColor: bcgColor }}></span>
       <img className={s.avatar}
         src={avatar}
         alt="User avatar"
         width="80px" />
       <p className={s.name}>{name}</p>
-    </li>
+    </div>
   );
 }
   
+FriendsListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+}
+
   export default FriendsListItem;
