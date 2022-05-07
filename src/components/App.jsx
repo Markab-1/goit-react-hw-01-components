@@ -17,7 +17,7 @@ import transactions from './transactionHistory/transactions.json'
 export const App = () => {
   return (
     <Container>
-      <Section>
+      <Section>        
         <Profile 
           username={user.username}
           tag={user.tag}
@@ -27,9 +27,9 @@ export const App = () => {
           />
       </Section>
       <Section>
-      <Statistics
-        title={data.title}
-        stats={data.stats}
+        <Statistics         
+          title={data.title}         
+          stats={data.stats}        
         />
       </Section>
       <Section>
@@ -38,10 +38,10 @@ export const App = () => {
         />
       </Section>
       <Section>
-        <TransactionHistory
+        <TransactionHistory          
           items={transactions}
         />
-      </Section>
-  </Container>
+      </Section>      
+    </Container>   
   );
 }
