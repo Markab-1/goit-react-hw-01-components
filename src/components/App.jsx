@@ -11,37 +11,29 @@ import FriendsList from './friendsList/FriendsList';
 import friends from './friendsList/friends.json';
 
 import TransactionHistory from './transactionHistory/TransactionHistory';
-import transactions from './transactionHistory/transactions.json'
-
+import transactions from './transactionHistory/transactions.json';
 
 export const App = () => {
   return (
     <Container>
-      <Section>        
-        <Profile 
+      <Section>
+        <Profile
           username={user.username}
           tag={user.tag}
           location={user.location}
           avatar={user.avatar}
-          stats = {user.stats}
-          />
-      </Section>
-      <Section>
-        <Statistics         
-          title={data.title}         
-          stats={data.stats}        
+          stats={user.stats}
         />
       </Section>
       <Section>
-        <FriendsList
-          friends={friends}
-        />
+        <Statistics title={data.title} stats={data.stats} />
       </Section>
       <Section>
-        <TransactionHistory          
-          items={transactions}
-        />
-      </Section>      
-    </Container>   
+        <FriendsList friends={friends} />
+      </Section>
+      <Section>
+        <TransactionHistory items={transactions} />
+      </Section>
+    </Container>
   );
-}
+};

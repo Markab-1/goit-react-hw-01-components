@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from './Statistics.module.css'
+import s from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
   return (
@@ -7,9 +7,11 @@ const Statistics = ({ title, stats }) => {
       {title && <h2 className={s.title}>{title}</h2>}
       <ul className={s.list}>
         {stats.map(stat => (
-          <li key={stat.id}
+          <li
+            key={stat.id}
             className={s.item}
-            style={{ backgroundColor: getRandomHexColor() }}>
+            style={{ backgroundColor: getRandomHexColor() }}
+          >
             <span className={s.label}>{stat.label}</span>
             <span className={s.percentage}>{stat.percentage}%</span>
           </li>
@@ -17,7 +19,7 @@ const Statistics = ({ title, stats }) => {
       </ul>
     </section>
   );
-}
+};
 
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
@@ -26,7 +28,7 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
       id: PropTypes.string.isRequired,
-    }),
+    })
   ),
 };
 
